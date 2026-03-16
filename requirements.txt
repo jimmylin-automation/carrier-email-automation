@@ -1,0 +1,4 @@
+pandas
+pdfplumber
+pywin32
+openpyxl
