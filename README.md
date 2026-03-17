@@ -1,4 +1,5 @@
 # 📦 Carrier Email Automation System
+Set SIMULATION_MODE = True to run demo without Outlook
 
 ## Overview
 This project automates the processing of carrier arrival notice emails by:
@@ -77,6 +78,7 @@ This is a **sanitized portfolio version**:
 Designed for logistics operations teams to reduce manual email handling and improve processing speed.
 
 ---
+
 
 ## 👨‍💻 Author
 
