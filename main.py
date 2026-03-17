@@ -11,6 +11,7 @@ from datetime import datetime
 # ==============================
 # SETTINGS (Example Configuration)
 # ==============================
+SIMULATION_MODE = False
 
 EXCEL_PATH = r"data/shipment_lookup.xlsx"
 MAIL_FOLDER_NAME = "Carrier_Notifications"
@@ -183,6 +184,37 @@ def collect_matches(content):
             results.add(container_map[c_norm])
 
     return results
+
+# ==============================
+# SIMULATION MODE (for demo / portfolio)
+# ==============================
+
+if SIMULATION_MODE:
+    print("Running in SIMULATION MODE...\n")
+
+    sample_emails = [
+        {
+            "subject": "Arrival Notice MBL123456",
+            "body": "Container ABCD1234567 arrived"
+        },
+        {
+            "subject": "Notice: Shipment update",
+            "body": "Container XYZU7654321 available for pickup"
+        }
+    ]
+
+    for msg in sample_emails:
+        content = msg["subject"] + " " + msg["body"]
+        matches = collect_matches(content)
+
+        print("EMAIL:", content)
+        print("MATCH RESULT:", matches)
+        print("-" * 50)
+        print(f"→ Forward To: {emails}")
+        print(f"→ Shipment IDs: {syyz_list}")
+
+    print("Simulation completed.")
+    exit()
 
 # ==============================
 # PROCESS EMAILS
