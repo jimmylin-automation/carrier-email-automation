@@ -8,6 +8,14 @@ This project automates the processing of carrier arrival notice emails by:
 - Automatically forwarding emails to responsible operators
 - Preventing duplicate processing using logging
 
+📧 Email
+   ↓
+🔍 Extract MBL / Container
+   ↓
+📊 Match Database
+   ↓
+📨 Forward to Operator
+
 ---
 
 ## 🚀 Key Features
