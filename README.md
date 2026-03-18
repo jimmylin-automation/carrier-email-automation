@@ -1,5 +1,20 @@
 # 📦 Carrier Email Automation System
-Set SIMULATION_MODE = True to run demo without Outlook
+
+## ▶️ How to Run
+
+1. Clone the repository
+
+git clone https://github.com/jimmylin-automation/carrier-email-automation.git
+
+2. Install dependencies
+
+pip install -r requirements.txt
+
+3. Run in simulation mode (no Outlook required)
+
+Set SIMULATION_MODE = True in main.py
+
+python main.py
 
 ## Overview
 This project automates the processing of carrier arrival notice emails by:
@@ -9,13 +24,9 @@ This project automates the processing of carrier arrival notice emails by:
 - Automatically forwarding emails to responsible operators
 - Preventing duplicate processing using logging
 
-📧 Email
-   ↓
-🔍 Extract MBL / Container
-   ↓
-📊 Match Database
-   ↓
-📨 Forward to Operator
+## 🔄 Workflow
+
+Email → Extract Data → Match Shipment → Forward → Log
 
 ---
 
@@ -63,6 +74,15 @@ carrier-email-automation/
 
 
 ---
+## 🧪 Sample Output (Simulation Mode)
+
+Running in SIMULATION MODE...
+
+EMAIL: Arrival Notice MBL123456
+MATCH RESULT: operatorA@example.com
+
+----------------------------------------
+Simulation completed.
 
 ## ⚠️ Note
 
